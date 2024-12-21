@@ -1,0 +1,104 @@
+/* 全体のレイアウト */
+.App {
+  display: flex;
+  justify-content: center; /* 横方向の中央揃え */
+  align-items: center; /* 縦方向の中央揃え */
+  height: 100vh; /* 画面全体の高さ */
+  gap: 40px; /* 要素間の間隔 */
+  padding: 20px;
+  position: relative;
+}
+
+/* 中央に表示する現在の数字とボタン */
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 現在の数字を表示する部分 */
+.current-number p {
+  font-size: 500px;
+  font-weight: bold;
+  margin: 30px 0;
+  text-align: center;
+}
+
+/* スタートボタンのスタイル */
+.start-button {
+  margin-top: 20px;
+  padding: 0;
+}
+button {
+  width: 400px;
+  height: 250px;
+  font-size: 80px;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  border-radius: 5px;
+  border: 3px solid #f3c52c;
+  background-color: #f4f742;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 初期状態での影 */
+  transition: box-shadow 0.2s ease, transform 0.1s ease;
+}
+
+/* スタートボタンのホバー効果 */
+button:hover {
+  background-color: #f75159;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* 色の変化にスムーズなアニメーション */
+}
+button:active {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  transform: translateY(4px);
+}
+
+/* 今まで出た数字を表示する部分 */
+.number-container {
+  display: flex;
+  flex-direction: row-reverse; /* 右端から左へ列を追加 */
+  padding: 10px;
+  overflow-x: auto; /* 横スクロールを許可 */
+  overflow-y: hidden; /* 縦スクロールを無効化 */
+  width: 30%; /* 画面の右3分の1 */
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/* 数字の列全体 */
+.columns-wrapper {
+  display: flex;
+  flex-direction: row-reverse; /* 右端から左へ列を追加 */
+  gap: 20px; /* 列間のスペース */
+}
+
+/* 個々の縦列 */
+.number-column {
+  display: flex;
+  flex-direction: column; /* 縦方向に並べる */
+  align-items: center;
+}
+
+
+/* 数字が拡大して現れるアニメーション */
+@keyframes scaleUpAndRotate {
+  0% {
+    transform: scale(0) rotate(0deg); /* 初期状態：拡大なし、回転なし */
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2) rotate(1440deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) rotate(1440deg);
+  }
+}
+
+/* アニメーション適用クラス */
+.animate-number {
+  display: inline-block;
+  animation: scaleUpAndRotate  1.5s ease-out;
+}

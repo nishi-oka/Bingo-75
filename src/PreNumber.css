@@ -1,0 +1,39 @@
+.number-container {
+  display: flex;
+  flex-direction: column; /* 縦並び */
+  align-items: flex-end;
+	margin-top: 50px;
+
+  padding: 10px;
+  width: 33%; /* 画面の右3分の1を占める */
+  height: 100%;
+}
+.number-container h3 {
+  text-align: center; /* 中央揃え */
+  margin-bottom: 20px; /* 下に余白を追加 */
+  width: 100%; /* 横幅全体を占める */
+	font-size: 30px;
+	color: #db91f1d2;
+}
+
+.number-column-wrapper {
+  display: flex;
+  flex-wrap: wrap; /* 1列内で横並びにする */
+  justify-content: flex-start; /* 左寄せ */
+  margin-bottom: 20px; /* 各列間のスペース */
+}
+
+.number-item {
+  width: 50px;
+  height: 50px;
+  background-color: #e999c7;
+  text-align: center;
+  font-size: 25px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+	font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
