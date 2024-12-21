@@ -1,16 +1,20 @@
 import React, { useEffect, useState } from 'react';
 
-const CurrentNumber = ({ number }) => {
+const CurrentNumber = ({ number, onAnimationEnd }) => {
 		const [animate, setAnimate] = useState(false);
 
 		useEffect(() => {
 			if (number !== null) {
 				setAnimate(true);
-				// アニメーションが終了したらクラスをリセット
-				const timeout = setTimeout(() => setAnimate(false), 1500); // 1500ms後にアニメーションをリセット
+
+				const timeout = setTimeout(() => {
+					setAnimate(false);
+					if (onAnimationEnd) onAnimationEnd(); // 親にアニメーション終了を通知
+				}, 1000); // アニメーションの時間（ms）
+
 				return () => clearTimeout(timeout); // クリーンアップ
 			}
-		}, [number]);
+		}, [number, onAnimationEnd]);
 
   return (
     <div className="current-number">
