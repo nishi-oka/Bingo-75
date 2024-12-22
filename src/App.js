@@ -10,7 +10,7 @@ function App() {
   const [isDisabled, setIsDisabled] = useState(false);
 
   const generateRandomNumber = () => {
-    if (isDisabled) return;// ボタンが無効化されているときはクリックできない
+    if (isDisabled) return; // ボタンが無効化されているときはクリックできない
     setIsDisabled(true); // ボタンを無効化
 
     setPastNumbers((prevNumbers) => {
@@ -34,8 +34,8 @@ function App() {
   return (
     <div className="App">
       <div className="content">
-        <CurrentNumber number={randomNumber}/>
-        <StartButton onClick={generateRandomNumber} isDisabled={isDisabled}/>
+        <CurrentNumber number={randomNumber} />
+        <StartButton onClick={generateRandomNumber} isDisabled={isDisabled} />
       </div>
       <PreNumber numbers={pastNumbers} />
     </div>

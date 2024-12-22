@@ -15,7 +15,7 @@ const PreNumber = ({ numbers }) => {
         {chunkedNumbers.map((chunk, colIndex) => (
           <div className="number-column" key={colIndex}>
             {chunk.map((number, rowIndex) => (
-              <div className="number-item" key={rowIndex}>
+              <div className="number-item animate-pre-number" key={rowIndex}>
                 {number}
               </div>
             ))}
