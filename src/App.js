@@ -4,6 +4,7 @@ import PreNumber from "./PreNumber";
 import StartButton from "./StartButton";
 import CurrentNumber from "./CurrentNumber";
 import ResetButton from "./ResetButton";
+import Decoration from "./Decoration";
 
 function App() {
   const [randomNumber, setRandomNumber] = useState(null); // 現在の数字
@@ -53,6 +54,7 @@ function App() {
   return (
     <div className="App">
       <div className="content">
+        <Decoration />
         <CurrentNumber number={randomNumber} fadeOut={fadeOut} />
         <StartButton onClick={generateRandomNumber} isDisabled={isDisabled} />
         <ResetButton onClick={resetState} isDisabled={isGenerating} /> {/* Resetボタンを無効化 */}
