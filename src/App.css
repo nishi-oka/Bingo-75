@@ -20,7 +20,7 @@
   margin: 30px 0;
   text-align: center;
   color: #fff;
-  text-shadow: 4px 4px 20px rgba(249, 122, 43, 0.648);
+  text-shadow: 4px 4px 20px #f67c9fee;
 }
 
 .current-number p.bingo-text {

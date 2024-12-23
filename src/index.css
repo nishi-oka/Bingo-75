@@ -7,7 +7,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(to right, #ff7e5f, #f7d9c3);
+  background: linear-gradient(to top, #ff7e5f 10%, #daf7c3 90%);/*#ff7e5f,f7d9c3*/
 }
 
 code {
