@@ -1,15 +1,22 @@
 .number-container {
   flex-direction: column; /* 縦並び */
   align-items: flex-end;
-	margin-top: 50px;
+	margin: 50px 10px 0 0 ;
   padding: 20px;
-  width: 33%; /* 画面の右3分の1を占める */
+	width: 30%; /* 画面の右3分の1 */
+  height: calc(100vh - 100px);
+	right: 0;
+  top: 0;
+  background-color: #f8f8f8;;
+  border-radius: 10px;
+	overflow-x: auto;
+	overflow-y: auto;
 }
 .number-container h3 {
   text-align: center; /* 中央揃え */
   width: 100%;
 	font-size: 40px;
-	color: #8cefa6ee;
+	color: #f67c9fee;
 	margin-bottom: 20px;
 	text-shadow: 5px 5px 5px #ffffff;
 	font-family: 'Baloo', cursive in !important;
@@ -27,7 +34,7 @@
   width: 50px;
   height: 50px;
 	color: #fff;
-  background-color: #9ddf2b;
+	background: linear-gradient(to bottom right, #edf8b8, #9a07a5);
   text-align: center;
   font-size: 25px;
   border-radius: 40%;

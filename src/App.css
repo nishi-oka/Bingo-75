@@ -35,7 +35,7 @@
   padding: 20px;
 }
 
-/* @keyframes fadeOut {
+@keyframes fadeOut {
   0% {
     opacity: 1;
   }
@@ -45,7 +45,7 @@
 }
 .fade-out {
   animation: fadeOut 1s ease-out forwards;
-} */
+}
 
 
 /* スタートボタンのスタイル */
@@ -65,7 +65,6 @@ button {
   color: #fded9f;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 初期状態での影 */
   transition: box-shadow 0.2s ease, transform 0.1s ease;
-
 }
 
 /* スタートボタンのホバー効果 */
@@ -82,21 +81,38 @@ button:active {
   transform: translateY(4px) scale(0.95);
 }
 
+.reset-button button {
+  width: 150px;
+  height: 80px;
+  font-size: 30px;
+  border: 10px solid #f8767c;
+  background-color: #f3c52c;
+  margin-top: 20px;
+  color: #838583;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 初期状態での影 */
+  transition: box-shadow 0.2s ease, transform 0.1s ease;
+}
+
+/* リセットボタンのホバー効果 */
+.reset-button :hover {
+  border: 5px solid #f3c52c;
+  background-color: #f4f742;
+  color: #838583;
+  cursor: pointer;
+  transition: background-color 0.1s ease; /* 色の変化にスムーズなアニメーション */
+  transform: scale(1.1);
+}
+.reset-button :active {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  transform: translateY(4px) scale(0.95);
+}
+
 /* 今まで出た数字を表示する部分 */
 .number-container {
   display: flex;
   flex-direction: row-reverse; /* 右端から左へ列を追加 */
-  margin: 10px;
-  overflow-x: auto; /* 横スクロールを許可 */
-  width: 30%; /* 画面の右3分の1 */
-  height: calc(100vh - 100px);
   position: absolute;
-  right: 0;
-  top: 0;
-  background-color: #f9f0f1;;
-  border-radius: 10px;
 }
-
 /* 数字の列全体 */
 .columns-wrapper {
   display: flex;
