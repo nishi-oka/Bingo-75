@@ -4,7 +4,7 @@ import PreNumber from "./PreNumber";
 import StartButton from "./StartButton";
 import CurrentNumber from "./CurrentNumber";
 import ResetButton from "./ResetButton";
-import Decoration from "./Decoration";
+
 
 function App() {
   const [randomNumber, setRandomNumber] = useState(null); // 現在の数字
@@ -40,7 +40,7 @@ function App() {
     // 2秒後にボタンを再度有効化
     setTimeout(() => {
       setIsDisabled(false); // ボタンを有効化
-    }, 3000);
+    }, 2000);
   };
 
   // リセット関数: 初期状態に戻す
@@ -55,16 +55,21 @@ function App() {
     // 2秒後にボタンを再度有効化
     setTimeout(() => {
       setIsDisabled(false); // ボタンを有効化
-    }, 2000);
+    }, 1000);
   };
 
   return (
     <div className="App">
       <div className="content">
-        <Decoration />
+
         <CurrentNumber number={randomNumber} fadeOut={fadeOut} />
-        <StartButton onClick={generateRandomNumber} isDisabled={isDisabled} /> {/* ボタン無効化 */}
-        <ResetButton onClick={resetState} isDisabled={isDisabled} /> {/* Resetボタンも無効化 */}
+        <StartButton
+          onClick={generateRandomNumber}
+          isDisabled={isDisabled}
+        />{" "}
+        {/* ボタン無効化 */}
+        <ResetButton onClick={resetState} isDisabled={isDisabled} />{" "}
+        {/* Resetボタンも無効化 */}
       </div>
       <PreNumber numbers={pastNumbers} />
     </div>

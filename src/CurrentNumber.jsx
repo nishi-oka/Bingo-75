@@ -1,17 +1,22 @@
 import React, { useEffect, useState } from "react";
 
-const CurrentNumber = ({ number, onAnimationEnd, fadeOut }) => {
+const CurrentNumber = ({ number, fadeOut }) => {
   const [animate, setAnimate] = useState(false);
+  const [displayNumber, setDisplayNumber] = useState(null);
 
   useEffect(() => {
-    if (number !== null) {
-      setAnimate(false); // アニメーションを一度リセット
-
-      const animationTimeout = setTimeout(() => {
+    if (fadeOut) {
+      // フェードアウト中は一旦数字を非表示にする
+      setAnimate(false);
+      const fadeTimeout = setTimeout(() => {
+        setDisplayNumber(number); // フェードアウト完了後に数字を更新
         setAnimate(true); // 新しい数字にアニメーションを適用
-      }, fadeOut ? 1000 : 0); // フェードアウトが完了してからアニメーション開始
+      }, 1000); // フェードアウト時間 (App.js に合わせて調整)
 
-      return () => clearTimeout(animationTimeout); // クリーンアップ
+      return () => clearTimeout(fadeTimeout); // クリーンアップ
+    } else {
+      setDisplayNumber(number); // フェードアウトがない場合は即時更新
+      setAnimate(true); // アニメーションを適用
     }
   }, [number, fadeOut]);
 
@@ -20,9 +25,9 @@ const CurrentNumber = ({ number, onAnimationEnd, fadeOut }) => {
       <p
         className={`${fadeOut ? "fade-out" : ""} ${
           animate ? "animate-number" : ""
-        } ${number === null ? "bingo-text" : ""}`}
+        } ${displayNumber === null ? "bingo-text" : ""}`}
       >
-        {number === null ? "Let's Bingo!" : number}
+        {displayNumber === null ? "Let's Bingo!" : displayNumber}
       </p>
     </div>
   );
