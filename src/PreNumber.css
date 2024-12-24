@@ -1,4 +1,5 @@
 .number-container {
+	display: flex;
   flex-direction: column; /* 縦並び */
   align-items: flex-end;
 	margin: 50px 10px 0 0 ;
@@ -9,8 +10,8 @@
   top: 0;
   background-color: #f8f8f8;;
   border-radius: 10px;
-	overflow-x: auto;
-	overflow-y: auto;
+	overflow-x: none;
+	overflow-y: hidden;
 }
 .number-container h3 {
   text-align: center; /* 中央揃え */
@@ -34,7 +35,6 @@
   width: 70px;
   height: 70px;
 	color: #fff;
-	background: linear-gradient(to bottom right, #edf8b8, #9a07a5);
   text-align: center;
   font-size: 45px;
   border-radius: 40%;
@@ -57,4 +57,26 @@
 
 .animate-pre-number {
   animation: fadeIn 1s ease-out;
+}
+
+.column-0 .number-item {
+  background: linear-gradient(to bottom right, #edf8b8, #9a07a5);
+}
+.column-1 .number-item {
+  background: linear-gradient(to bottom right, #efe2cd, #d0e720);
+}
+.column-2 .number-item {
+  background: linear-gradient(to bottom right, #efe2cd, #39b54a);
+}
+.column-3 .number-item {
+  background: linear-gradient(to bottom right, #ff9a9e, #fad0c4);
+}
+.column-4 .number-item {
+  background: linear-gradient(to bottom right, #ff7e5f, #feb47b);
+}
+.column-5 .number-item {
+  background: linear-gradient(to bottom right, #a18cd1, #fbc2eb);
+}
+.column-6 .number-item {
+  background: linear-gradient(to bottom right, #84fab0, #8fd3f4);
 }

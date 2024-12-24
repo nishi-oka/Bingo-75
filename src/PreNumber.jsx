@@ -13,7 +13,10 @@ const PreNumber = ({ numbers }) => {
       <h3>今まで出た数字</h3>
       <div className="columns-wrapper">
         {chunkedNumbers.map((chunk, colIndex) => (
-          <div className="number-column" key={colIndex}>
+          <div
+            className={`number-column column-${colIndex % 7}`} // 列ごとに異なるクラスを適用
+            key={colIndex}
+          >
             {chunk.map((number, rowIndex) => (
               <div className="number-item animate-pre-number" key={rowIndex}>
                 {number}
