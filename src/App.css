@@ -64,7 +64,7 @@ button {
   background-color: #f75159;
   color: #ffffff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 初期状態での影 */
-  transition: box-shadow 0.2s ease, transform 0.1s ease;
+  transition: box-shadow 0.2s ease, transform 0.095s ease;
 }
 
 /* スタートボタンのホバー効果 */

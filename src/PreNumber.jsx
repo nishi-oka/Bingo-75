@@ -2,10 +2,10 @@ import React from "react";
 import "./PreNumber.css";
 
 const PreNumber = ({ numbers }) => {
-  // 15個ごとに分割
+  // 11個ごとに分割
   const chunkedNumbers = [];
-  for (let i = 0; i < numbers.length; i += 15) {
-    chunkedNumbers.push(numbers.slice(i, i + 15));
+  for (let i = 0; i < numbers.length; i += 11) {
+    chunkedNumbers.push(numbers.slice(i, i + 11));
   }
 
   return (
