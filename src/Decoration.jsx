@@ -19,7 +19,7 @@ const Decoration = () => {
               fontSize: `${generateRandomSize()}px`,  // ランダムなサイズを適用
             }}
           >
-            ●
+            ❄
           </div>
         ))}
       </div>

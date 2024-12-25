@@ -11,7 +11,7 @@
 .snowflake {
   position: absolute;
   top: -10px;
-  color: white;
+  color: #ffffff;
   opacity: 0.8;
   animation: snowfall 10s linear infinite;
   display: flex;
