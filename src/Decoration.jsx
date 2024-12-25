@@ -2,7 +2,7 @@ import React from 'react';
 import './Decoration.css';
 
 const Decoration = () => {
-  const generateRandomSize = () => Math.floor(Math.random() * (50 - 10 + 1)) + 30;
+  const generateRandomSize = () => Math.floor(Math.random() * (80 - 10 + 1)) + 30;
 
   return (
     <div className="decoration">

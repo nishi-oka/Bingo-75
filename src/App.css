@@ -20,11 +20,11 @@
   margin: 30px 0;
   text-align: center;
   color: #fff;
-  text-shadow: 4px 4px 20px #f67c9fee;
+  text-shadow: 4px 4px 20px #f3b2c5ee;
 }
 
 .current-number p.bingo-text {
-  font-size: 150px !important;
+  font-size: 160px !important;
   color: #fcfcfc !important;
   margin: 30px;
   line-height: 625px;
@@ -59,10 +59,10 @@ button {
   font-size: 80px;
   font-weight: bold;
   font-family: 'Poppins', sans-serif;
-  border-radius: 10px;
-  border: 20px solid #f3c52c;
+  border-radius: 50px;
+  border: 20px solid #ffffff;
   background-color: #f75159;
-  color: #fded9f;
+  color: #ffffff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 初期状態での影 */
   transition: box-shadow 0.2s ease, transform 0.1s ease;
 }
@@ -85,9 +85,10 @@ button:active {
   width: 150px;
   height: 80px;
   font-size: 30px;
-  border: 10px solid #f8767c;
+  border: 10px solid #fff157;
   background-color: #f3c52c;
-  margin-top: 20px;
+  border-radius: 10px;
+  margin-top: 50px;
   color: #838583;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 初期状態での影 */
   transition: box-shadow 0.2s ease, transform 0.1s ease;
