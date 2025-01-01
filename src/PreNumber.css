@@ -1,11 +1,14 @@
+/* 今まで出た数字を表示する部分 */
 .number-container {
 	display: flex;
-  flex-direction: column; /* 縦並び */
-  align-items: flex-end;
+  flex-direction: row-reverse; /* 右端から左へ列を追加 */
+  position: absolute;
+  flex-direction: column;
+  align-items: flex-end; /* 格納した数字を右から並べる */
 	margin: 50px 10px 0 0 ;
   padding: 20px;
 	width: 30%; /* 画面の右3分の1 */
-  height: calc(100vh - 100px);
+  height: calc(100vh - 110px);
 	right: 0;
   top: 0;
   background-color: #f8f8f8;;
@@ -13,8 +16,24 @@
 	overflow-x: none;
 	overflow-y: hidden;
 }
+
+@media screen and (max-width: 768px) {
+  .number-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    overflow-y: auto; /* スクロール可能に */
+    padding: 0  10px 10px 10px; /* スペース調整 */
+    margin: 20px 10px 10px 10px;
+    width: 350px; /* 全幅を使用 */
+    position: static;
+    height: auto;
+  }
+}
+
 .number-container h3 {
-  text-align: center; /* 中央揃え */
+  text-align: center;
   width: 100%;
 	font-size: 40px;
 	color: #486a8ebd;
@@ -23,12 +42,43 @@
 	font-family: 'Baloo', cursive in !important;
 	font-weight: bold;
 }
+@media screen and (max-width: 768px) {
+  .number-container h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    justify-content: flex-start;
+  }
+}
 
 .number-column-wrapper {
   display: flex;
-  flex-wrap: wrap; /* 1列内で横並びにする */
+  flex-wrap: wrap;
   justify-content: flex-start; /* 左寄せ */
   margin-bottom: 20px; /* 各列間のスペース */
+}
+/* 数字の列全体 */
+.columns-wrapper {
+  display: flex;
+  flex-direction: row-reverse; /* 右端から左へ列を追加 */
+  gap: 20px; /* 列間のスペース */
+}
+
+/* 個々の縦列 */
+.number-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 768px) {
+  .columns-wrapper {
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+    gap: 20px; /* 列間のスペース */
+  }
+  .number-column {
+    flex-direction: row;
+  }
 }
 
 .number-item {
@@ -44,6 +94,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .number-item {
+    width: 20px;
+    height: 20px;
+    font-size: 15px;
+    border-radius: 50%;
+    margin-bottom: 5px;
+    margin-right: 5px;
+  }
 }
 
 @keyframes fadeIn {
@@ -79,4 +139,27 @@
 }
 .column-6 .number-item {
   background: linear-gradient(to bottom right, #84fab0, #8fd3f4);
+}
+
+
+@keyframes fadeInPreNumber {
+  from {
+    opacity: 0;
+    transform: translateY(10px); /* 少し下からスライド */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* 元の位置 */
+  }
+}
+
+/* フェードイン効果を適用するクラス */
+.fadeInPreNumber {
+  animation: fadeIn 0.5s ease-out;
+}
+
+@media screen and (max-width: 768px) {
+  .fadeInPreNumber {
+    animation: fadeIn 2.5s ease-out;
+  }
 }

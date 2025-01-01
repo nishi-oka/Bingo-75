@@ -8,6 +8,7 @@ body {
   justify-content: center;
   align-items: center;
   background: linear-gradient(to top, #5fcfff 10%, #f0faad 90%);/*#ff7e5f,f7d9c3*/
+  background-repeat: no-repeat;
 }
 
 code {
@@ -21,4 +22,13 @@ code {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media screen and (max-width: 768px) {
+  body{
+    height: 100vh;
+    background-size: 100% 100%;
+  }
+  .main-container{
+    justify-content: center;
+  }
 }
