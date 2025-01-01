@@ -109,6 +109,7 @@ button {
     font-size: 20px;
     border-radius: 35px;
     border: 8px solid #ffffff;
+    align-items: center;
   }
 }
 
@@ -120,6 +121,7 @@ button:hover {
   cursor: pointer;
   transition: background-color 0.1s ease; /* 色の変化にスムーズなアニメーション */
   transform: scale(1.1);
+  align-items: center;
 }
 
 @media screen and (max-width: 768px) {
