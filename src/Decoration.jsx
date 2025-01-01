@@ -1,8 +1,26 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './Decoration.css';
 
 const Decoration = () => {
-  const generateRandomSize = () => Math.floor(Math.random() * (80 - 10 + 1)) + 30;
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  // ウィンドウサイズの変更を監視
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const generateRandomSize = () => {
+    // 画面サイズに応じたサイズをランダムに生成
+    if (windowWidth <= 768) {
+      return Math.floor(Math.random() * (40 - 10 + 1)) + 5;  // スマホ用
+    }
+    return Math.floor(Math.random() * (80 - 10 + 1)) + 30; // デスクトップ用
+  };
 
   return (
     <div className="decoration">
