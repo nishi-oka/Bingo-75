@@ -104,28 +104,28 @@ button {
 }
 @media screen and (max-width: 768px) {
   button {
-    width: 110px;
+    width: 100px;
     height: 70px;
     font-size: 20px;
-    font-weight: bold;
-    font-family: 'Poppins', sans-serif;
-    border-radius: 50px;
-    border: 10px solid #ffffff;
-    background-color: #f75159;
-    color: #ffffff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 初期状態での影 */
-    transition: box-shadow 0.2s ease, transform 0.095s ease;
+    border-radius: 35px;
+    border: 8px solid #ffffff;
   }
 }
 
 /* スタートボタンのホバー効果 */
 button:hover {
-  border: 10px solid #f3c52c;
-  background-color: #f4f742;
-  color: #d56a0c;
+  border: 10px solid #f5fc31;
+  background-color: #c48bf2;
+  color: #ffffff;
   cursor: pointer;
   transition: background-color 0.1s ease; /* 色の変化にスムーズなアニメーション */
   transform: scale(1.1);
+}
+
+@media screen and (max-width: 768px) {
+  button:hover {
+    border: 8px solid #f5fc31;
+  }
 }
 button:active {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
@@ -137,7 +137,7 @@ button:active {
   height: 80px;
   font-size: 30px;
   border: 10px solid #fff157;
-  background-color: #f3c52c;
+  background-color: #e0bef2;
   border-radius: 10px;
   margin-top: 50px;
   color: #838583;
@@ -151,7 +151,6 @@ button:active {
     height: 40px;
     font-size: 15px;
     border: 5px solid #fff157;
-    background-color: #f3c52c;
     border-radius: 10px;
     margin-top: 20px;
     color: #838583;
