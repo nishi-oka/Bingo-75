@@ -39,7 +39,7 @@
 @media screen and (max-width: 800px) {
   .current-number p {
     align-self: flex-start;
-    font-size: 200px;
+    font-size: 180px;
     font-weight: bold;
     margin: 10px 0 40px 0;
     text-align: center;
