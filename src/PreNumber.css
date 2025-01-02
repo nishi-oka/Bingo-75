@@ -45,6 +45,7 @@
   .number-container h3 {
     font-size: 20px;
     justify-content: flex-start;
+    margin-bottom: 10px;
   }
 }
 
