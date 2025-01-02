@@ -1,9 +1,8 @@
 /* 今まで出た数字を表示する部分 */
 .number-container {
 	display: flex;
-  flex-direction: row-reverse; /* 右端から左へ列を追加 */
-  position: absolute;
   flex-direction: column;
+  position: absolute;
   align-items: flex-end; /* 格納した数字を右から並べる */
 	margin: 50px 10px 0 0 ;
   padding: 20px;
@@ -17,7 +16,7 @@
 	overflow-y: hidden;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
   .number-container {
     display: flex;
     flex-direction: column;
@@ -42,10 +41,9 @@
 	font-family: 'Baloo', cursive in !important;
 	font-weight: bold;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
   .number-container h3 {
     font-size: 20px;
-    margin-bottom: 10px;
     justify-content: flex-start;
   }
 }
@@ -69,12 +67,13 @@
   flex-direction: column;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
   .columns-wrapper {
     display: flex;
     align-self: center;
     flex-direction: column;
-    gap: 20px; /* 列間のスペース */
+    gap: 10px; /* 列間のスペース */
+    margin: 0 0 20px 0;
   }
   .number-column {
     flex-direction: row;
@@ -82,11 +81,11 @@
 }
 
 .number-item {
-  width: 70px;
-  height: 70px;
+  width: 150px;
+  height: 150px;
 	color: #fff;
   text-align: center;
-  font-size: 45px;
+  font-size: 100px;
   border-radius: 40%;
   margin-bottom: 10px;
   margin-right: 10px;
@@ -95,11 +94,11 @@
   justify-content: center;
   align-items: center;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
   .number-item {
-    width: 20px;
-    height: 20px;
-    font-size: 15px;
+    width: 25px;
+    height: 25px;
+    font-size: 18px;
     border-radius: 50%;
     margin-bottom: 5px;
     margin-right: 5px;
@@ -158,7 +157,7 @@
   animation: fadeIn 0.5s ease-out;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
   .fadeInPreNumber {
     animation: fadeIn 2.5s ease-out;
   }

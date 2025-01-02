@@ -4,7 +4,7 @@
   align-items: center;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
   .App {
     display: contents;
   }
@@ -21,26 +21,27 @@
   align-items: center;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
   .content {
-    margin-top: 50px;
+    margin-top: 20px;
   }
 }
 
 /* 現在の数字を表示する部分 */
 .current-number p {
-  font-size: 500px;
+  font-size: 800px;
   font-weight: bold;
-  margin: 30px 0;
+  margin: 30px 0 60px 0;
   text-align: center;
   color: #fff;
   text-shadow: 4px 4px 20px #f3b2c5ee;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
   .current-number p {
-    font-size: 150px;
+    align-self: flex-start;
+    font-size: 200px;
     font-weight: bold;
-    margin: 10px 0;
+    margin: 10px 0 50px 0;
     text-align: center;
     color: #fff;
     text-shadow: 4px 4px 20px #f3b2c5ee;
@@ -58,11 +59,12 @@
   padding: 20px;
   position: static;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
   .current-number p.bingo-text {
+    align-self: flex-start;
     font-size: 100px !important;
     color: #fcfcfc !important;
-    margin: 20px;
+    margin: 0 0 60px 0;
     line-height: 100px;
     text-align: center;
     text-shadow: 4px 4px 10px #eaf51c;
@@ -89,10 +91,11 @@
   padding: 0;
 }
 button {
-  width: 400px;
-  height: 250px;
-  font-size: 80px;
+  width: 500px;
+  height: 300px;
+  font-size: 120px;
   align-items: center;
+  text-align: center;
   font-weight: bold;
   font-family: 'Poppins', sans-serif;
   border-radius: 50px;
@@ -102,12 +105,12 @@ button {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 初期状態での影 */
   transition: box-shadow 0.2s ease, transform 0.095s ease;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
   button {
     width: 100px;
     height: 70px;
     font-size: 20px;
-    border-radius: 35px;
+    border-radius: 30px;
     border: 8px solid #ffffff;
     align-items: center;
   }
@@ -121,10 +124,9 @@ button:hover {
   cursor: pointer;
   transition: background-color 0.1s ease; /* 色の変化にスムーズなアニメーション */
   transform: scale(1.1);
-  align-items: center;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
   button:hover {
     border: 8px solid #f5fc31;
   }
@@ -135,26 +137,26 @@ button:active {
 }
 
 .reset-button button {
-  width: 150px;
-  height: 80px;
-  font-size: 30px;
+  width: 300px;
+  height: 150px;
+  font-size: 60px;
   border: 10px solid #fff157;
   background-color: #e0bef2;
   border-radius: 10px;
-  margin-top: 50px;
+  margin-top: 100px;
   color: #838583;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 初期状態での影 */
   transition: box-shadow 0.2s ease, transform 0.1s ease;
   align-items: center;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
   .reset-button button {
     width: 80px;
     height: 40px;
     font-size: 15px;
     border: 5px solid #fff157;
     border-radius: 10px;
-    margin-top: 20px;
+    margin: 10px 0 20px 0;
     color: #838583;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 初期状態での影 */
     transition: box-shadow 0.2s ease, transform 0.1s ease;
